@@ -132,7 +132,7 @@
       }
     },
     "/user-info": {
-      "post": {
+      "get": {
         "tags": ["Profile"],
         "x-swagger-router-controller": "home",
         "description": "get the user info",
