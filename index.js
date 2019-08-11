@@ -17,8 +17,7 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 
 // public files
-app.use(express.static("public"));
-
+app.use(express.static('public'));
 
 const swaggerDocument = JSON.parse(
   fs.readFileSync(`${__dirname}/src/swagger.json`, 'utf8')
@@ -31,8 +30,9 @@ require('./src/routes')(app);
 // add swagger doc route
 app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.listen(process.env.PORT, () => {
-  console.log(`running on ${process.env.PORT}`);
+const PORT = process.env.PORT ? process.env.PORT : 3000;
+app.listen(PORT, () => {
+  console.log(`running on ${PORT}`);
   mongoose
     .connect(process.env.MONGO, {
       useNewUrlParser: true
