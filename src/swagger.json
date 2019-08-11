@@ -6,7 +6,7 @@
     "version": "1.0"
   },
   "schemes": ["http"],
-  "host": "localhost:5000",
+  "host": "backend-curso-flutter.herokuapp.com",
   "basePath": "/api/v1",
   "produces": ["application/json"],
   "paths": {
