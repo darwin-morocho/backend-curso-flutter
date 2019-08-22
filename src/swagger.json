@@ -60,14 +60,7 @@
             "examples": {
               "application/json": {
                 "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNDliZWZjNmZlMjU1NTM1M2YyYzNlOCIsImlhdCI6MTU2NTExNDEwOCwiZXhwIjoxNTY1MTE3NzA4fQ.e4Uk92jiM17fnX3jKbkYHLvKjr9wp8EWTIL8lbe6vTU",
-                "expiresIn": 3600,
-                "user": {
-                  "_id": "5d49befc6fe2555353f2c3e8",
-                  "name": "Darwin Morocho",
-                  "email": "www.dina.ec@gmail.com",
-                  "createdAt": "2019-08-06T17:55:08.430Z",
-                  "updatedAt": "2019-08-06T17:55:08.430Z"
-                }
+                "expiresIn": 3600
               }
             }
           }
@@ -117,14 +110,7 @@
             "examples": {
               "application/json": {
                 "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNDliZWZjNmZlMjU1NTM1M2YyYzNlOCIsImlhdCI6MTU2NTExNDEwOCwiZXhwIjoxNTY1MTE3NzA4fQ.e4Uk92jiM17fnX3jKbkYHLvKjr9wp8EWTIL8lbe6vTU",
-                "expiresIn": 3600,
-                "user": {
-                  "_id": "5d49befc6fe2555353f2c3e8",
-                  "name": "Darwin Morocho",
-                  "email": "www.dina.ec@gmail.com",
-                  "createdAt": "2019-08-06T17:55:08.430Z",
-                  "updatedAt": "2019-08-06T17:55:08.430Z"
-                }
+                "expiresIn": 3600
               }
             }
           }

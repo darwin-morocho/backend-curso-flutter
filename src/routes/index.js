@@ -20,8 +20,7 @@ module.exports = app => {
       });
       res.status(200).send({
         token,
-        expiresIn: EXPIRES_IN,
-        user: response
+        expiresIn: EXPIRES_IN
       });
     } catch (error) {
       if (error.code && error.code === 11000) {
@@ -40,8 +39,7 @@ module.exports = app => {
       });
       res.status(200).send({
         token,
-        expiresIn: EXPIRES_IN,
-        user: response
+        expiresIn: EXPIRES_IN
       });
     } catch (error) {
       res.status(500).send({ message: error.message });
