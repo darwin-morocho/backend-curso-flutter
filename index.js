@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const swaggerUi = require('swagger-ui-express');
 const fs = require('fs');
+const http = require('http');
 
 require('dotenv').config();
 
@@ -38,7 +39,9 @@ app.listen(PORT, () => {
       useNewUrlParser: true
     })
     .then(() => {
-      console.log(`connected to mongodb`);
+      setInterval(() => {
+        http.get('https://backend-curso-flutter.herokuapp.com');
+      }, 600000); // every 10 minutes (600000)
     })
     .catch(e => {
       console.error(`error to trying connected to mongodb ${e}`);
