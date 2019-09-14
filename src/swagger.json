@@ -207,6 +207,92 @@
           }
         }
       }
+    },
+    "/api/v1/tokens/register": {
+      "post": {
+        "tags": ["refresh"],
+        "x-swagger-router-controller": "home",
+        "description": "save the token into db",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "jwt token"
+          }
+        ],
+        "responses": {
+          "403": {
+            "description": "Acceso denegado jwt",
+            "examples": {
+              "application/json": {
+                "message": "invalid jwt"
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno del servidor",
+            "examples": {
+              "application/json": {
+                "message": "invalid email"
+              }
+            }
+          },
+          "200": {
+            "description": "JSON",
+            "examples": {
+              "application/json": {
+                "message": "OK"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tokens/refresh": {
+      "post": {
+        "tags": ["refresh"],
+        "x-swagger-router-controller": "home",
+        "description": "invalid a token and return a new jwt",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "jwt token"
+          }
+        ],
+        "responses": {
+          "403": {
+            "description": "Acceso denegado jwt",
+            "examples": {
+              "application/json": {
+                "message": "invalid jwt"
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno del servidor",
+            "examples": {
+              "application/json": {
+                "message": "invalid email"
+              }
+            }
+          },
+          "200": {
+            "description": "JSON",
+            "examples": {
+              "application/json": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2MwMzYwMThlZGU3NjA1YTZmZDA1OSIsImlhdCI6MTU2ODQwODU0MCwiZXhwIjoxNTY4NDEyMTQwfQ.YkNckU--SM3c7IjU8aLTebeKSX4gLqlqG_Aqpw3F4Gs",
+                "expiresIn": 3600,
+                "unit": "seconds"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

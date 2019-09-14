@@ -4,9 +4,10 @@ const { Schema } = mongoose;
 
 const schema = Schema(
   {
-    name: {
+    username: {
       type: String,
-      require: true
+      require: true,
+      unique: true
     },
     email: {
       type: String,
@@ -18,7 +19,7 @@ const schema = Schema(
       require: true
     },
     avatar: {
-      type: String,
+      type: String
     }
   },
   { timestamps: true }

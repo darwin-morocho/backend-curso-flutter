@@ -5,7 +5,7 @@ const User = require('../mongo/models/user');
 
 // create a new user and save into db
 const register = async data => {
-  const { name, email } = data;
+  const { username, email } = data;
   let { password } = data;
 
   if (!validator.isEmail(email)) throw new Error('invalid email');
@@ -13,7 +13,7 @@ const register = async data => {
   password = await bcrypt.hash(password, 10);
 
   const user = await User.create({
-    name,
+    username,
     email,
     password
   });
