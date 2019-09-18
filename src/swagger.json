@@ -17,7 +17,7 @@
         "description": "Create a new user",
         "parameters": [
           {
-            "name": "name",
+            "name": "username",
             "in": "formData",
             "required": true,
             "type": "string",
@@ -154,7 +154,7 @@
             "examples": {
               "application/json": {
                 "_id": "5d49befc6fe2555353f2c3e8",
-                "name": "Darwin Morocho",
+                "username": "DarwinMorocho",
                 "email": "www.dina.ec@gmail.com",
                 "createdAt": "2019-08-06T17:55:08.430Z",
                 "updatedAt": "2019-08-06T17:55:08.430Z"
