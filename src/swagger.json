@@ -208,7 +208,7 @@
         }
       }
     },
-    "/api/v1/tokens/register": {
+    "/tokens/register": {
       "post": {
         "tags": ["refresh"],
         "x-swagger-router-controller": "home",
@@ -250,7 +250,7 @@
         }
       }
     },
-    "/api/v1/tokens/refresh": {
+    "/tokens/refresh": {
       "post": {
         "tags": ["refresh"],
         "x-swagger-router-controller": "home",
