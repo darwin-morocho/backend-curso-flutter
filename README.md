@@ -10,7 +10,7 @@ SECRET = SqHgGGHfMixctTbT33t92hIhQM3ZiGPnc0mnoiC
 ```
 This project use mlab as mongodb host don't use these credentials in production.
 
-2.  Next install the dependences running `npm install`
+2.  Next install the dependencies running `npm install`
 
 3. Run the project with `npm run dev`
 
