@@ -20,10 +20,10 @@ module.exports = io => {
       user
     });
     connectedUsers[id] = user;
-    socket.on('send', data => {
+    socket.on('send', message => {
       socket.broadcast.emit('new-message', {
         from: { id, username: user.username },
-        data
+        message
       });
     });
 
