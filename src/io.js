@@ -19,11 +19,20 @@ module.exports = io => {
       id,
       user
     });
+
     connectedUsers[id] = user;
+
     socket.on('send', message => {
       socket.broadcast.emit('new-message', {
         from: { id, username: user.username },
         message
+      });
+    });
+
+    socket.on('send-file', ({ type, url }) => {
+      socket.broadcast.emit('new-file', {
+        from: { id, username: user.username },
+        file: { type, url }
       });
     });
 
